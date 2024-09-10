@@ -1,0 +1,46 @@
+[
+	{
+		"id": 1,
+		"image": "https://www.malditogames.com/wp-content/uploads/SQ_Pampero.jpg",
+		"title": "PAMPERO",
+		"availability": "¡Ya disponible!",
+		"author": "Julián Pombo",
+		"price": 120,
+		"players": "1-4",
+		"duration": "120'",
+		"age": 14
+	},
+	{
+		"id": 2,
+		"image": "https://www.malditogames.com/wp-content/uploads/SQ_pampero-naturaleza.jpg",
+		"title": "PAMPERO: NATURALEZA",
+		"availability": "¡Ya disponible!",
+		"author": "Julián Pombo",
+		"price": 20,
+		"players": "2-4",
+		"duration": "120'",
+		"age": 14
+	},
+	{
+		"id": 3,
+		"image": "https://www.malditogames.com/wp-content/uploads/SQ_Farshore.jpg",
+		"title": "FARSHORE",
+		"availability": "¡Ya disponible!",
+		"author": "James y Clarissa A. Wilson",
+		"price": 50,
+		"players": "2-4",
+		"duration": "40-80'",
+		"age": 10
+	},
+	{
+		"id": 4,
+		"image": "https://www.malditogames.com/wp-content/uploads/2019/01/SQ_BrassBir.jpg",
+		"title": "BRASS: BIRMINGHAM Edición Deluxe",
+		"availability": "¡Ya disponible!",
+		"author": "Martin Wallace, Matt Tolman y Gavan Brown",
+		"price": 80,
+		"players": "2-4",
+		"duration": "80-120'",
+		"age": 14
+	}
+]

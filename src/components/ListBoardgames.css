@@ -1,0 +1,9 @@
+.boardgames-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacio equitativo entre las tarjetas */
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%; /* Ancho completo */
+    margin: 0 auto;
+}

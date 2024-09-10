@@ -1,0 +1,40 @@
+.sobre-nosotros-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .spanish-section, .english-section {
+    margin-bottom: 30px;
+  }
+  
+  p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  strong {
+    color: #e74c3c;
+  }
+  
+  .newsletter-link {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .newsletter-link:hover {
+    text-decoration: underline;
+  }
+  
+  .section-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+  }

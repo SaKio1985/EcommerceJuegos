@@ -1,0 +1,76 @@
+/* Estilos para el botón de Inicio */
+.button-inicio {
+  background-color: white !important;
+  color: black !important;
+}
+
+.button-inicio:hover {
+  background-color: gold !important;
+  color: black !important;
+}
+
+/* Estilos para el botón de Juegos */
+.button-juegos {
+  background-color: #e0e0e0 !important; /* Fondo gris claro por defecto */
+  color: black !important;
+}
+
+.button-juegos:hover {
+  background-color: #007bff !important; /* Fondo azul al hacer hover */
+  color: white !important;
+}
+
+/* Estilos para el botón de Noticias */
+.button-noticias {
+  background-color: #f8e6e0 !important; /* Fondo rosado por defecto */
+  color: black !important;
+}
+
+.button-noticias:hover {
+  background-color: #e57373 !important; /* Fondo rojo claro al hacer hover */
+  color: white !important;
+}
+
+/* Estilos para el botón de Sobre Nosotros */
+.button-sobrenosotros {
+  background-color: #e8f5e9 !important; /* Fondo verde claro por defecto */
+  color: black !important;
+}
+
+.button-sobrenosotros:hover {
+  background-color: #66bb6a !important; /* Fondo verde más oscuro al hacer hover */
+  color: white !important;
+}
+
+/* Estilos para el botón de Contacto */
+.button-contacto {
+  background-color: #e3f2fd !important; /* Fondo azul claro por defecto */
+  color: black !important;
+}
+
+.button-contacto:hover {
+  background-color: #2196f3 !important; /* Fondo azul oscuro al hacer hover */
+  color: white !important;
+}
+
+/* Estilos para el botón de Tienda */
+.button-tienda {
+  background-color: #fff3e0 !important; /* Fondo naranja claro por defecto */
+  color: black !important;
+}
+
+.button-tienda:hover {
+  background-color: #ff9800 !important; /* Fondo naranja oscuro al hacer hover */
+  color: white !important;
+}
+
+/* Estilos para el botón de Portugués */
+.button-portugues {
+  background-color: #ede7f6 !important; /* Fondo morado claro por defecto */
+  color: black !important;
+}
+
+.button-portugues:hover {
+  background-color: #8e24aa !important; /* Fondo morado oscuro al hacer hover */
+  color: white !important;
+}
