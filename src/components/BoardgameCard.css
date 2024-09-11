@@ -112,3 +112,29 @@
         color: #303030; /* Color oscuro para modo claro */
     }
 }
+/* Tarjetas para la vista JuegosComponent */
+.card-small {
+    flex: 1 1 calc(25% - 20px); /* Ocupa un cuarto del ancho del contenedor */
+    max-width: 150px;
+    margin: 10px;
+}
+
+.card-small .card-image-container {
+    height: 100px;
+    width: 100%;
+}
+
+.card-small .card-image {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-small .card-title {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-small .card-content {
+    padding: 8px;
+}
