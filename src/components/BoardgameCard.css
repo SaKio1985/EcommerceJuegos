@@ -114,27 +114,24 @@
 }
 /* Tarjetas para la vista JuegosComponent */
 .card-small {
-    flex: 1 1 calc(25% - 20px); /* Ocupa un cuarto del ancho del contenedor */
-    max-width: 150px;
+    width: 150px; /* Cambia el tamaño de la tarjeta */
     margin: 10px;
-}
-
-.card-small .card-image-container {
+  }
+  
+  .card-small .card-image {
     height: 100px;
-    width: 100%;
-}
-
-.card-small .card-image {
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-small .card-title {
+    width: 100px;
+  }
+  
+  .card-small .card-title {
     font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.card-small .card-content {
+  }
+  
+  .card-small .card-content {
     padding: 8px;
-}
+  }
+  
+  .card-small .card-button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }

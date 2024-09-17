@@ -2,6 +2,7 @@ import { faChild, faClock, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./CardComponent.css";
+import { Link } from "react-router-dom";
 
 const CardComponent = ({
   image,
@@ -12,6 +13,7 @@ const CardComponent = ({
   players,
   duration,
   age,
+  id,
 }) => {
   return (
     <div className="card">
@@ -35,8 +37,9 @@ const CardComponent = ({
         <p className="card-availability">{availability}</p>
         <p className="card-author">Autor: {author}</p>
         <p className="card-price">PVPr: {price}€</p>
+        <p>{id}</p>
         <button type="button" className="card-button">
-          Más información
+          <Link to={`/boardgame/${id}`}>Más información</Link>
         </button>
       </div>
     </div>

@@ -1,10 +1,20 @@
 import "./BoardgameCard.css";
 import { faChild, faClock, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export default function BoardgameCard({ boardgame, customClass, minimal }) {
-  const { image, title, players, duration, age, availability, author, price } =
-    boardgame;
+  const {
+    image,
+    title,
+    players,
+    duration,
+    age,
+    availability,
+    author,
+    price,
+    id,
+  } = boardgame;
 
   return (
     <article className={`card ${customClass}`}>
@@ -33,7 +43,7 @@ export default function BoardgameCard({ boardgame, customClass, minimal }) {
             <p className="card-author">Autor: {author}</p>
             <p className="card-price">PVPr: {price}€</p>
             <button type="button" className="card-button">
-              Más información
+              <Link to={`/boardgame/${id}`}>Más información</Link>
             </button>
           </>
         )}

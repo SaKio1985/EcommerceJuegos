@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ButtonComponent from "./ButtonComponent";
+import CartButton from "./CartButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./NavComponent.css";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
 
 export default function NavComponent() {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const [cartItemCount, setCartItemCount] = useState(0); // Estado para el contador del carrito
 
+  const [cart, setCart, agregarProducto] = useContext(CartContext);
+
+  useEffect(() => {
+    setCartItemCount(cart.length);
+  }, [cart]);
   const toggleSearch = () => {
     setIsSearchVisible(!isSearchVisible);
   };
@@ -72,13 +81,8 @@ export default function NavComponent() {
                 showIcon={false}
               />
             </Link>
-            <Link to="/portugues">
-              <ButtonComponent
-                texto="Portugues"
-                ancho={120}
-                customClass="button-portugues"
-                showIcon={false}
-              />
+            <Link to="/cart">
+              <CartButton itemCount={cartItemCount} />
             </Link>
           </div>
         )}
@@ -90,11 +94,13 @@ export default function NavComponent() {
                 placeholder="Buscar..."
                 className="search-input"
               />
+              {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
               <button onClick={toggleSearch} className="search-close">
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
           ) : (
+            // biome-ignore lint/a11y/useButtonType: <explanation>
             <button onClick={toggleSearch} className="search-button">
               <FontAwesomeIcon icon={faSearch} />
             </button>
