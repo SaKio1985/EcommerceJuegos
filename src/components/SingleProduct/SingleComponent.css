@@ -1,74 +1,74 @@
 /* Estilo general para el contenedor */
 .single-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px;
-  }
-  
-  .single-container .info {
-    flex: 1;
-  }
-  
-  .single-container .image {
-    flex: 0.5;
-    text-align: center;
-  }
-  
-  /* Ajuste del ancho máximo para la barra de iconos */
-  .card-icons {
-    display: flex;
-    justify-content: space-around; /* Cambia space-between a space-around para mejor distribución */
-    padding: 5px 10px;
-    max-width: 600px; /* Limitar el ancho máximo de la barra */
-    margin: 0 auto; /* Centrar la barra */
-  }
-  
-  .icon-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .icon-item span {
-    font-size: 16px;
-  }
-  
-  h1, h3 {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .description {
-    font-size: 14px;
-    margin-top: 30px;
-  }
-  
-  .price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #d67e3b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #b5672e;
-  }
-  
-  .image img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  button.add-to-cart {
-    margin-top: 20px;
-  }
-  
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	gap: 20px;
+}
+
+.single-container .info {
+	flex: 1;
+}
+
+.single-container .image {
+	flex: 0.5;
+	text-align: center;
+}
+
+/* Ajuste del ancho máximo para la barra de iconos */
+.card-icons {
+	display: flex;
+	justify-content: space-around; /* Cambia space-between a space-around para mejor distribución */
+	padding: 5px 10px;
+	max-width: 600px; /* Limitar el ancho máximo de la barra */
+	margin: 0 auto; /* Centrar la barra */
+}
+
+.icon-item {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.icon-item span {
+	font-size: 16px;
+}
+
+h1,
+h3 {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.description {
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.price {
+	font-size: 24px;
+	font-weight: bold;
+	color: #555;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #d67e3b;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #b5672e;
+}
+
+.image img {
+	max-width: 100%;
+	height: auto;
+}
+
+button.add-to-cart {
+	margin-top: 20px;
+}

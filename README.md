@@ -42,7 +42,9 @@ Juegos de Mesa es una tienda en línea especializada en la venta de juegos de me
 
 ## Uso
 
-[Aquí puedes agregar instrucciones específicas sobre cómo usar la aplicación, con capturas de pantalla si es posible]
+![Imagenes de la tienda] (https://res.cloudinary.com/dko8avpyk/image/upload/v1727108970/Arc_5kYD6bhVZc_mwysdn.png)
+(https://res.cloudinary.com/dko8avpyk/image/upload/v1727109030/Arc_wodPE9odGI_cgcopc.png)
+(https://res.cloudinary.com/dko8avpyk/image/upload/v1727109029/Arc_gJ40LuRxLG_f9kxts.png)
 
 ## Contribución
 
