@@ -8,6 +8,8 @@
 .cart-item {
 	display: flex;
 	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
 	margin-bottom: 15px;
 	padding: 10px;
 	background-color: white;
@@ -23,7 +25,10 @@
 }
 
 .cart-item-info {
-	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 20px;
 }
 
 .quantity-control {
@@ -33,7 +38,7 @@
 }
 
 .quantity-control button {
-	background-color: #e9ecef;
+	background-color: #061d35;
 	border: none;
 	padding: 5px 10px;
 	cursor: pointer;
