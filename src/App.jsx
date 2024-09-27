@@ -16,39 +16,39 @@ import SingleComponent from "./components/SingleProduct/SingleComponent";
 import CartComponent from "./components/CartComponent";
 
 function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <ProductProvider>
-          <CartProvider>
-            <NavComponent />
-            <Banner />
-            <Routes>
-              <Route exact path="/" element={<HomeComponent />} />
-              <Route exact path="/juegos" element={<JuegosComponent />} />
-              <Route exact path="/news" element={<NewsComponent />} />
-              <Route
-                exact
-                path="/sobrenosotros"
-                element={<SobrenosotrosComponent />}
-              />
-              <Route exact path="/contact" element={<ContactComponent />} />
-              <Route exact path="/tienda" element={<ShopComponent />} />
-              <Route exact path="/portugues" element={<PortuguesComponent />} />
-              <Route
-                exact
-                path="/boardgame/:id"
-                element={<SingleComponent />}
-              />
-              <Route exact path="/cart" element={<CartComponent />} />
-            </Routes>
+	return (
+		<>
+			<BrowserRouter>
+				<ProductProvider>
+					<CartProvider>
+						<NavComponent />
+						<Banner />
+						<Routes>
+							<Route exact path="/" element={<HomeComponent />} />
+							<Route exact path="/juegos" element={<JuegosComponent />} />
+							<Route exact path="/news" element={<NewsComponent />} />
+							<Route
+								exact
+								path="/sobrenosotros"
+								element={<SobrenosotrosComponent />}
+							/>
+							<Route exact path="/contact" element={<ContactComponent />} />
+							<Route exact path="/tienda" element={<ShopComponent />} />
+							<Route exact path="/portugues" element={<PortuguesComponent />} />
+							<Route
+								exact
+								path="/boardgame/:id"
+								element={<SingleComponent />}
+							/>
+							<Route exact path="/cart" element={<CartComponent />} />
+						</Routes>
 
-            <Footer />
-          </CartProvider>
-        </ProductProvider>
-      </BrowserRouter>
-    </>
-  );
+						<Footer />
+					</CartProvider>
+				</ProductProvider>
+			</BrowserRouter>
+		</>
+	);
 }
 
 export default App;
