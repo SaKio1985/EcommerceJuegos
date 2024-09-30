@@ -1,28 +1,30 @@
 /* homeComponent.css */
-.home-boardgames-container {
+.home-boardgames-container, .boardgames-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	gap: 30px;
+	gap: 30px; /* Ajusta el espacio entre las tarjetas */
 	padding: 20px;
 	max-width: 100%;
 	margin: 0 auto;
-}
-
-.home-boardgame-card {
-	flex: 1 1 calc(25% - 20px); /* Show 4 cards per row */
-	max-width: 250px; /* Limit card size */
-}
-
-/* Responsive adjustments */
-@media (max-width: 1100px) {
-	.home-boardgame-card {
-		flex: 1 1 calc(33.33% - 20px); /* 3 cards per row on medium screens */
+  }
+  
+  .home-boardgame-card, .boardgame-card {
+	flex: 1 1 calc(25% - 20px); /* Mostrar 4 tarjetas por fila */
+	max-width: 250px; /* Limitar el tamaño de las tarjetas */
+	box-sizing: border-box;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 1100px) {
+	.home-boardgame-card, .boardgame-card {
+	  flex: 1 1 calc(33.33% - 20px); /* 3 tarjetas por fila en pantallas medianas */
 	}
-}
-
-@media (max-width: 768px) {
-	.home-boardgame-card {
-		flex: 1 1 100%; /* 1 card per row on small screens */
+  }
+  
+  @media (max-width: 768px) {
+	.home-boardgame-card, .boardgame-card {
+	  flex: 1 1 100%; /* 1 tarjeta por fila en pantallas pequeñas */
 	}
-}
+  }
+  

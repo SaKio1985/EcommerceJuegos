@@ -72,3 +72,14 @@ button:hover {
 button.add-to-cart {
 	margin-top: 20px;
 }
+.back-link {
+	display: block;
+	text-align: left;
+	margin-bottom: 20px;
+	color: #a0a0ff; /* Color más visible */
+	font-size: 16px; /* Tamaño de fuente más legible */
+  }
+  
+  .back-link:hover {
+	color: #ffffff; /* Cambia a blanco al pasar el ratón */
+  }

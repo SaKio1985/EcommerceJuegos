@@ -1,10 +1,26 @@
 .footer {
-	background-color: #f0f0f0;
-	text-align: center;
+	background-color: #2a2a2a; /* Fondo un poco más claro para contraste */
+	color: #f0f0f0; /* Texto claro para mejor legibilidad */
 	padding: 20px;
-}
-
-.social-icons a {
-	margin: 0 10px;
-	color: #333;
-}
+  }
+  
+  .footer p {
+	color: #b0b0b0; /* Texto del footer */
+  }
+  
+  .footer a {
+	color: #c0c0ff; /* Enlaces más visibles */
+  }
+  
+  .footer a:hover {
+	color: #fff; /* Enlaces en blanco al pasar el mouse */
+  }
+  
+  .social-icons a {
+	color: #c0c0ff; /* Colores de iconos sociales */
+  }
+  
+  .social-icons a:hover {
+	color: #fff; /* Iconos en blanco al pasar el mouse */
+  }
+  
