@@ -26,12 +26,14 @@
 
 .icon-item {
 	display: flex;
-	align-items: center;
-	gap: 5px;
+	gap: 20px;
+	flex-direction: row;
+	margin-top: 10px;
 }
 
 .icon-item span {
 	font-size: 16px;
+	white-space: nowrap;
 }
 
 h1,
@@ -52,12 +54,12 @@ h3 {
 }
 
 button {
-	padding: 10px 20px;
-	background-color: #d67e3b;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+    padding: 10px 20px;
+    background-color: #00ff00; /* Color verde menta */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
@@ -78,8 +80,59 @@ button.add-to-cart {
 	margin-bottom: 20px;
 	color: #a0a0ff; /* Color más visible */
 	font-size: 16px; /* Tamaño de fuente más legible */
-  }
-  
-  .back-link:hover {
+}
+
+.back-link:hover {
 	color: #ffffff; /* Cambia a blanco al pasar el ratón */
-  }
+}
+.contenedor-detalle{
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	justify-content: center;
+}
+.contenedor-descripcion{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+.detalle{
+	width: 40%;
+	text-align: left;
+}
+.precio{
+	color: aqua;
+	font-weight: 900;
+}
+.detalle input{
+	background-color: #242424;
+	color:aliceblue;
+	width: 50px;
+	border: none;
+	height: 40px;
+	margin-right: 5px;
+
+}
+.components-list{
+	display: flex;
+	justify-content: center;
+	text-align: left;
+	flex-direction: row;
+	gap: 30px;
+	width: 80%;
+}
+.components-list h5 {
+	color: aliceblue;
+	font-weight: normal; /* Asegurarse de que el texto no esté en negrita */
+}
+/* Estilo para el texto dentro de icon-item */
+.icon-item .icon-text {
+	color: rgb(73, 94, 112);
+	font-weight: normal; /* Asegurarse de que el texto no esté en negrita */
+}
+.input-numero {
+	background-color: aliceblue;
+	color: gray;
+	border-color: #ffffff;
+}
