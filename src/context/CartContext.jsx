@@ -44,7 +44,7 @@ export function CartProvider({ children }) {
 	};
 
 	const carroTotal = () => {
-		let total = cart.reduce(
+		const total = cart.reduce(
 			(acumulador, item) => acumulador + item.price * item.quantity,
 			0,
 		);

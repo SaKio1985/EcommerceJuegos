@@ -1,3 +1,4 @@
+/* Estilos existentes */
 #root {
 	max-width: 100%;
 	margin: 0 auto;
@@ -11,4 +12,86 @@
 	gap: 20px;
 	justify-content: center;
 	margin: 20px 0;
+}
+
+/* Nuevos estilos para el tema */
+:root {
+	--transition-speed: 0.3s;
+}
+
+body {
+	transition: background-color var(--transition-speed), color
+		var(--transition-speed);
+}
+
+.App {
+	min-height: 100vh;
+	transition: background-color var(--transition-speed), color
+		var(--transition-speed);
+}
+
+.App.light {
+	background-color: #ffffff;
+	color: #333333;
+}
+
+.App.dark {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+.main-content {
+	/* Estilos comunes para el contenido principal */
+	transition: background-color var(--transition-speed), color
+		var(--transition-speed);
+}
+
+.main-content.light {
+	/* Estilos específicos para el modo claro */
+	background-color: #f0f0f0;
+}
+
+.main-content.dark {
+	/* Estilos específicos para el modo oscuro */
+	background-color: #1a1a1a;
+}
+
+/* Asegúrate de que los elementos dentro de .cards-container también respondan al tema */
+.cards-container > * {
+	transition: background-color var(--transition-speed), color
+		var(--transition-speed);
+}
+
+/* Puedes agregar más estilos específicos para los elementos de las tarjetas si es necesario */
+.cards-container .card.light {
+	background-color: #ffffff;
+	color: #333333;
+}
+
+.cards-container .card.dark {
+	background-color: #2a2a2a;
+	color: #ffffff;
+}
+.theme-light {
+	--background-color: #ffffff;
+	--text-color: #000000;
+	--button-bg-color: #f0f0f0;
+	--button-text-color: #000000;
+}
+
+.theme-dark {
+	--background-color: #1a1a1a;
+	--text-color: #ffffff;
+	--button-bg-color: #333333;
+	--button-text-color: #ffffff;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+button {
+	background-color: var(--button-bg-color);
+	color: var(--button-text-color);
 }

@@ -6,7 +6,7 @@ const images = [
 	"https://www.malditogames.com/wp-content/uploads/dulcecaos-banner-web-1200x396.jpg",
 	"https://www.malditogames.com/wp-content/uploads/valle-eternindad-banner-1200x396.jpg",
 	"https://www.malditogames.com/wp-content/uploads/apiario-banner-web-1200x396.jpg",
-	// Agregada mas imagenes para realizarlo interactivo
+	"https://www.malditogames.com/wp-content/uploads/oscuridadasfix-banner-1200x396.jpg",
 ];
 
 function Banner() {
@@ -16,16 +16,15 @@ function Banner() {
 		const intervalId = setInterval(() => {
 			setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
 		}, 10000);
-
 		return () => clearInterval(intervalId);
 	}, []);
 
 	return (
-		<section className="relative w-full h-[396px] overflow-hidden">
+		<section className="relative w-full overflow-hidden">
 			<img
 				src={images[currentImageIndex]}
 				alt={`banner-${currentImageIndex + 1}`}
-				className="w-full h-full object-cover"
+				className="w-full h-auto object-cover"
 			/>
 		</section>
 	);

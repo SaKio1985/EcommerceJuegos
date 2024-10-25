@@ -1,3 +1,4 @@
+import React from "react";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import NavComponent from "./components/NavComponent";
@@ -11,37 +12,41 @@ import { ProductProvider } from "./context/ProductsContext";
 import { CartProvider } from "./context/CartContext";
 import SingleComponent from "./components/SingleProduct/SingleComponent";
 import CartComponent from "./components/CartComponent";
+import { useTheme } from "./components/UseTheme";
 
 function App() {
+	const [theme, toggleTheme] = useTheme();
+
 	return (
-		<>
+		<div className={`App ${theme}`}>
 			<BrowserRouter>
 				<ProductProvider>
 					<CartProvider>
 						<NavComponent />
 						<Banner />
-						<Routes>
-							<Route exact path="/" element={<HomeComponent />} />
-							<Route exact path="/news" element={<NewsComponent />} />
-							<Route
-								exact
-								path="/sobrenosotros"
-								element={<SobrenosotrosComponent />}
-							/>
-							<Route exact path="/contact" element={<ContactComponent />} />
-							<Route
-								exact
-								path="/boardgame/:id"
-								element={<SingleComponent />}
-							/>
-							<Route exact path="/cart" element={<CartComponent />} />
-						</Routes>
-
+						<main className={`main-content ${theme}`}>
+							<Routes>
+								<Route exact path="/" element={<HomeComponent />} />
+								<Route exact path="/news" element={<NewsComponent />} />
+								<Route
+									exact
+									path="/sobrenosotros"
+									element={<SobrenosotrosComponent />}
+								/>
+								<Route exact path="/contact" element={<ContactComponent />} />
+								<Route
+									exact
+									path="/boardgame/:id"
+									element={<SingleComponent />}
+								/>
+								<Route exact path="/cart" element={<CartComponent />} />
+							</Routes>
+						</main>
 						<Footer />
 					</CartProvider>
 				</ProductProvider>
 			</BrowserRouter>
-		</>
+		</div>
 	);
 }
 

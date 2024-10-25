@@ -1,11 +1,12 @@
 import React from "react";
+import "./NewsComponent.css";
 
 const NewsItem = ({ title, description, image }) => (
-	<div className="bg-white shadow-md rounded-lg overflow-hidden">
-		<img src={image} alt={title} className="w-full h-40 object-cover" />
-		<div className="p-4">
-			<h2 className="font-bold text-xl mb-2">{title}</h2>
-			<p className="text-gray-700 text-base">{description}</p>
+	<div className="news-card">
+		<img src={image} alt={title} className="news-card-image" />
+		<div className="news-card-content">
+			<h2 className="news-card-title">{title}</h2>
+			<p className="news-card-description">{description}</p>
 		</div>
 	</div>
 );
@@ -30,9 +31,11 @@ export default function NewsComponent() {
 	];
 
 	return (
-		<div className="container mx-auto px-4">
-			<h1 className="text-4xl font-bold my-8">NOTICIAS</h1>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+		<div className="news-container">
+			<div className="news-header">
+				<h1 className="news-title">NOTICIAS</h1>
+			</div>
+			<div className="news-grid">
 				{newsItems.map((item) => (
 					<NewsItem key={item.id} {...item} />
 				))}

@@ -1,14 +1,18 @@
 .sobre-nosotros-container {
-	max-width: 800px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px;
 	font-family: Arial, sans-serif;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
 	color: #333;
-	border-bottom: 2px solid #ddd;
+	font-size: 24px;
+	margin-bottom: 20px;
 	padding-bottom: 10px;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 .spanish-section,
@@ -19,14 +23,16 @@ h1 {
 p {
 	line-height: 1.6;
 	margin-bottom: 15px;
+	color: #333;
 }
 
 strong {
-	color: #e74c3c;
+	color: #ce1126;
+	font-weight: normal;
 }
 
 .newsletter-link {
-	color: #3498db;
+	color: #0066cc;
 	text-decoration: none;
 }
 
@@ -36,6 +42,15 @@ strong {
 
 .section-divider {
 	border: 0;
-	border-top: 1px solid #eee;
+	border-top: 1px solid #e0e0e0;
 	margin: 30px 0;
+}
+
+/* Additional styles to match the original */
+body {
+	background-color: #f5f5f5;
+}
+
+.sobre-nosotros-container {
+	padding: 40px;
 }

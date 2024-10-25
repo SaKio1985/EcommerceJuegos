@@ -1,22 +1,35 @@
+import {
+	faMoon,
+	faSearch,
+	faSun,
+	faTimes,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import ButtonComponent from "./ButtonComponent";
 import CartButton from "./CartButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./NavComponent.css";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
-import { useContext } from "react";
+import { useTheme } from "./UseTheme";
 
 export default function NavComponent() {
 	const [isSearchVisible, setIsSearchVisible] = useState(false);
-	const [cartItemCount, setCartItemCount] = useState(0); // Estado para el contador del carrito
+	const [cartItemCount, setCartItemCount] = useState(0);
+	const [theme, toggleTheme] = useTheme();
 
 	const { cart } = useContext(CartContext);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		setCartItemCount(cart.length);
+
+		// Asegúrate de que todo el documento recibe el tema
+		document.documentElement.setAttribute("data-theme", theme);
+		localStorage.setItem("theme", theme);
 	}, [cart]);
+
 	const toggleSearch = () => {
 		setIsSearchVisible(!isSearchVisible);
 	};
@@ -41,7 +54,6 @@ export default function NavComponent() {
 								showIcon={false}
 							/>
 						</Link>
-
 						<Link to="/news">
 							<ButtonComponent
 								texto="Noticias"
@@ -69,6 +81,11 @@ export default function NavComponent() {
 						<Link to="/cart">
 							<CartButton itemCount={cartItemCount} />
 						</Link>
+
+						{/* Iconos para cambiar el tema */}
+						<button onClick={toggleTheme} className="theme-toggle-button">
+							<FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} />
+						</button>
 					</div>
 				)}
 				<div className="navbar-search">
@@ -79,13 +96,11 @@ export default function NavComponent() {
 								placeholder="Buscar..."
 								className="search-input"
 							/>
-							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 							<button onClick={toggleSearch} className="search-close">
 								<FontAwesomeIcon icon={faTimes} />
 							</button>
 						</div>
 					) : (
-						// biome-ignore lint/a11y/useButtonType: <explanation>
 						<button onClick={toggleSearch} className="search-button">
 							<FontAwesomeIcon icon={faSearch} />
 						</button>

@@ -6,6 +6,7 @@ const SobreNosotrosComponent = () => {
 	return (
 		<div className="sobre-nosotros-container">
 			<h1>Sobre nosotros</h1>
+			<hr className="section-divider" />
 
 			<section className="spanish-section">
 				<p>

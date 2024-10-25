@@ -74,3 +74,7 @@
 	background-color: #8e24aa !important; /* Fondo morado oscuro al hacer hover */
 	color: white !important;
 }
+
+.button-cart {
+	background-color: coral;
+}

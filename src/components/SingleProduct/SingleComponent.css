@@ -18,10 +18,10 @@
 /* Ajuste del ancho máximo para la barra de iconos */
 .card-icons {
 	display: flex;
-	justify-content: space-around; /* Cambia space-between a space-around para mejor distribución */
+	justify-content: space-around;
 	padding: 5px 10px;
-	max-width: 600px; /* Limitar el ancho máximo de la barra */
-	margin: 0 auto; /* Centrar la barra */
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 .icon-item {
@@ -53,17 +53,20 @@ h3 {
 	color: #555;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #00ff00; /* Color verde menta */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Botón agregar al carrito */
+.button-agregar-carrito {
+	background-color: #26dcdc; /* Rojo destacable */
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
 }
 
-button:hover {
-	background-color: #b5672e;
+.button-agregar-carrito:hover {
+	background-color: #b91c1c; /* Oscurece el color en hover */
 }
 
 .image img {
@@ -71,9 +74,6 @@ button:hover {
 	height: auto;
 }
 
-button.add-to-cart {
-	margin-top: 20px;
-}
 .back-link {
 	display: block;
 	text-align: left;
@@ -85,36 +85,54 @@ button.add-to-cart {
 .back-link:hover {
 	color: #ffffff; /* Cambia a blanco al pasar el ratón */
 }
-.contenedor-detalle{
+
+.contenedor-detalle {
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
 	justify-content: center;
 }
-.contenedor-descripcion{
+
+.contenedor-descripcion {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	
 }
-.detalle{
+
+.detalle {
 	width: 40%;
 	text-align: left;
 }
-.precio{
+
+.precio {
 	color: aqua;
 	font-weight: 900;
 }
-.detalle input{
-	background-color: #242424;
-	color:aliceblue;
+
+/* Estilo del input de cantidad */
+.detalle input {
+	background-color: #f3f4f6;
+	color: #111827;
 	width: 50px;
-	border: none;
+	border: 1px solid #d1d5db;
 	height: 40px;
 	margin-right: 5px;
-
 }
-.components-list{
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	opacity: 1; /* Asegura que los botones sean siempre visibles */
+	display: inline-block;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+	padding: 0.25rem;
+	background-color: #ffffff;
+	color: #111827;
+}
+
+.components-list {
 	display: flex;
 	justify-content: center;
 	text-align: left;
@@ -122,17 +140,13 @@ button.add-to-cart {
 	gap: 30px;
 	width: 80%;
 }
+
 .components-list h5 {
 	color: aliceblue;
-	font-weight: normal; /* Asegurarse de que el texto no esté en negrita */
+	font-weight: normal;
 }
-/* Estilo para el texto dentro de icon-item */
+
 .icon-item .icon-text {
 	color: rgb(73, 94, 112);
-	font-weight: normal; /* Asegurarse de que el texto no esté en negrita */
-}
-.input-numero {
-	background-color: aliceblue;
-	color: gray;
-	border-color: #ffffff;
+	font-weight: normal;
 }

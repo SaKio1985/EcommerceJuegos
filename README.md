@@ -19,7 +19,9 @@ Juegos de Mesa es una tienda en línea especializada en la venta de juegos de me
 - HTML5
 - CSS3
 - React
-- Rspack (como compilador)
+- Rsbuild (como compilador)
+- Pnpm
+- Biome
 
 ## Instalación
 
@@ -33,11 +35,11 @@ Juegos de Mesa es una tienda en línea especializada en la venta de juegos de me
    ```
 3. Instala las dependencias:
    ```
-   npm install
+   pnpm install
    ```
 4. Inicia el servidor de desarrollo:
    ```
-   npm start
+   pnpm start
    ```
 
 # Uso
