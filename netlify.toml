@@ -1,0 +1,14 @@
+# netlify.toml
+
+# Configuración del proceso de build
+[build]
+  command = "pnpm run build"  # O "npm run build" si usas npm
+  publish = "dist"            # El directorio de salida, igual que en Vercel
+
+# Regla de reescritura para que React Router funcione
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+    
