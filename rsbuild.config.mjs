@@ -9,12 +9,12 @@ export default defineConfig({
       index: "./src/main.jsx",
     },
   },
+  // SECCIÓN OUTPUT SIMPLIFICADA
   output: {
-    publicPath: "/", 
+    publicPath: "/", // Esto es lo único que necesitas para las rutas
     distPath: {
       root: "dist",
     },
-    // assetPrefix: "/static/", // LÍNEA ELIMINADA: Esta era la causa del problema.
   },
   server: {
     publicDir: {
@@ -24,43 +24,7 @@ export default defineConfig({
   },
   html: {
     template: "./src/index.html",
-    filename: "index.html",
-    inject: "body",
-    templateParameters: {
-      PUBLIC_PATH: "/",
-    },
   },
-  tools: {
-    swc: {
-      // ... (sin cambios aquí)
-      jsc: {
-        parser: {
-          syntax: "typescript",
-          tsx: true,
-        },
-        transform: {
-          react: {
-            runtime: "automatic",
-            development: process.env.NODE_ENV === "development",
-          },
-        },
-      },
-      env: {
-        targets: [
-          "chrome >= 87",
-          "edge >= 88",
-          "firefox >= 78",
-          "safari >= 14",
-        ],
-      },
-    },
-    rspack: {
-
-      output: {
-        filename: "static/js/[name].[contenthash:8].js",
-        chunkFilename: "static/js/[name].[contenthash:8].chunk.js",
-        assetModuleFilename: "static/media/[name].[hash][ext]",
-      },
-    },
-  },
+  // HEMOS QUITADO TODA LA SECCIÓN "tools.rspack"
+  // Dejaremos que Rsbuild use sus valores por defecto, que son seguros.
 });
