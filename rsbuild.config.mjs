@@ -1,3 +1,4 @@
+// rsbuild.config.ts
 import { defineConfig } from "@rsbuild/core";
 import { pluginReact } from "@rsbuild/plugin-react";
 
@@ -8,15 +9,13 @@ export default defineConfig({
       index: "./src/main.jsx",
     },
   },
-  // SECCIÓN AÑADIDA: Configuración de salida crítica
   output: {
-    publicPath: "/", // ¡Esto es esencial para Vercel!
+    publicPath: "/", 
     distPath: {
-      root: "dist", // Asegura la estructura correcta
+      root: "dist",
     },
-    assetPrefix: "/static/", // Prefijo para assets
+    // assetPrefix: "/static/", // LÍNEA ELIMINADA: Esta era la causa del problema.
   },
-  // SECCIÓN AÑADIDA: Manejo de assets estáticos
   server: {
     publicDir: {
       name: "public",
@@ -26,7 +25,6 @@ export default defineConfig({
   html: {
     template: "./src/index.html",
     filename: "index.html",
-    // SECCIÓN AÑADIDA: Inyección correcta de recursos
     inject: "body",
     templateParameters: {
       PUBLIC_PATH: "/",
@@ -34,6 +32,7 @@ export default defineConfig({
   },
   tools: {
     swc: {
+      // ... (sin cambios aquí)
       jsc: {
         parser: {
           syntax: "typescript",
@@ -55,8 +54,8 @@ export default defineConfig({
         ],
       },
     },
-    // SECCIÓN AÑADIDA: Optimización de assets
     rspack: {
+
       output: {
         filename: "static/js/[name].[contenthash:8].js",
         chunkFilename: "static/js/[name].[contenthash:8].chunk.js",
