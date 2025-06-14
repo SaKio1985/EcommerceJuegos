@@ -1,20 +1,27 @@
 .card {
-	flex: 1 1 calc(33.33% - 20px); /* Ocupa un tercio del ancho del contenedor */
-	max-width: 350px; /* Ajuste opcional para limitar el tamaño máximo de las tarjetas */
+	flex: 1 1 calc(33.33% - 20px);
+	max-width: 350px;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid #e0e0e0;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	background-color: #fff;
+	background-color: var(--card-background, #fff);
+	color: var(--app-text-color, #333);
 	margin-bottom: 20px;
+	transition: all 0.3s ease;
+}
+
+:root[data-theme="dark"] .card {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card-image-container {
 	width: 100%;
 	height: 0;
-	padding-top: 75%; /* Mantén la proporción 4:3 */
+	padding-top: 75%;
 	position: relative;
 	overflow: hidden;
 }
@@ -25,7 +32,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+	object-fit: cover;
 	background-color: #f0f0f0;
 }
 
@@ -40,8 +47,14 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 12px;
-	background-color: #e0e0e0; /* Fondo gris más oscuro para los iconos */
+	background-color: rgba(0, 0, 0, 0.05);
+	padding: 8px;
+	border-radius: 4px;
 	gap: 15px;
+}
+
+:root[data-theme="dark"] .card-icons {
+	background-color: rgba(255, 255, 255, 0.05);
 }
 
 .icon-item {
@@ -49,11 +62,11 @@
 	flex-direction: column;
 	align-items: center;
 	font-size: 0.8rem;
-	color: #333; /* Color de texto más oscuro para mejor contraste */
+	color: var(--app-text-color, #333);
 }
 
 .icon-item svg {
-	color: #555; /* Color de icono más oscuro */
+	color: var(--app-text-color, #555);
 	font-size: 1.2rem;
 	margin-bottom: 4px;
 }
@@ -62,7 +75,7 @@
 	font-size: 1.2rem;
 	margin-bottom: 8px;
 	font-weight: bold;
-	color: #333; /* Color de título más oscuro */
+	color: var(--app-text-color, #333);
 }
 
 .card-availability {
@@ -73,7 +86,7 @@
 .card-author,
 .card-price {
 	margin-bottom: 6px;
-	color: #555; /* Color de texto más oscuro */
+	color: var(--app-text-color, #555);
 }
 
 .card-button {
@@ -91,32 +104,27 @@
 	background-color: #1976d2;
 }
 
+.card-button a {
+	color: white;
+	text-decoration: none;
+}
+
 /* Media queries para responsividad */
 @media (max-width: 1100px) {
 	.card {
-		flex: 1 1 calc(50% - 20px); /* 2 tarjetas por fila en pantallas medianas */
+		flex: 1 1 calc(50% - 20px);
 	}
 }
 
 @media (max-width: 768px) {
 	.card {
-		flex: 1 1 100%; /* 1 tarjeta por fila en pantallas pequeñas */
-	}
-}
-@media (prefers-color-scheme: dark) {
-	.icon-item svg {
-		color: #f0f0f0; /* Color claro para modo oscuro */
+		flex: 1 1 100%;
 	}
 }
 
-@media (prefers-color-scheme: light) {
-	.icon-item svg {
-		color: #303030; /* Color oscuro para modo claro */
-	}
-}
 /* Tarjetas para la vista JuegosComponent */
 .card-small {
-	width: 150px; /* Cambia el tamaño de la tarjeta */
+	width: 150px;
 	margin: 10px;
 }
 
