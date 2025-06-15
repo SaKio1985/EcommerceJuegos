@@ -1,85 +1,83 @@
 .sobre-nosotros-container {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 60px 40px;
-	font-family: "Arial", sans-serif;
-	background-color: #fff;
-	line-height: 1.7;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  font-family: "Arial", sans-serif;
+  background-color: var(--main-background);
+  color: var(--app-text-color);
+  line-height: 1.7;
+  min-height: 60vh;
+  transition: all 0.3s ease;
 }
 
 h1 {
-	color: #333;
-	font-size: 28px;
-	font-weight: normal;
-	margin-bottom: 30px;
-	padding-bottom: 15px;
-	border-bottom: 1px solid #ddd;
-	text-align: left;
+  color: var(--app-text-color);
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
 }
 
 .spanish-section,
 .english-section {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 p {
-	line-height: 1.7;
-	margin-bottom: 20px;
-	color: #333;
-	font-size: 16px;
-	text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: var(--app-text-color);
+  font-size: 16px;
+  text-align: justify;
 }
 
 strong {
-	color: #d32f2f;
-	font-weight: bold;
+  color: #d32f2f;
+  font-weight: bold;
 }
 
 .newsletter-link {
-	color: #1976d2;
-	text-decoration: none;
-	font-weight: 500;
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .newsletter-link:hover {
-	text-decoration: underline;
+  text-decoration: underline;
+  color: #1565c0;
 }
 
 .section-divider {
-	border: 0;
-	border-top: 1px solid #ddd;
-	margin: 50px 0;
-	width: 100%;
-}
-
-/* Estilos para el cuerpo de la página */
-body {
-	background-color: #f8f9fa;
-	margin: 0;
-	padding: 0;
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 50px 0;
+  width: 100%;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-	.sobre-nosotros-container {
-		padding: 30px 20px;
-	}
+  .sobre-nosotros-container {
+    padding: 30px 20px;
+  }
 
-	h1 {
-		font-size: 24px;
-	}
+  h1 {
+    font-size: 24px;
+  }
 
-	p {
-		font-size: 15px;
-	}
+  p {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 480px) {
-	.sobre-nosotros-container {
-		padding: 20px 15px;
-	}
+  .sobre-nosotros-container {
+    padding: 20px 15px;
+  }
 
-	h1 {
-		font-size: 22px;
-	}
+  h1 {
+    font-size: 22px;
+  }
 }
