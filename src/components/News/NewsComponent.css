@@ -1,186 +1,186 @@
 /* Estilo inspirado en Maldito Games */
 .news-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  color: #ffffff;
-  min-height: 100vh;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	color: #ffffff;
+	min-height: 100vh;
 }
 
 .news-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
+	text-align: center;
+	margin-bottom: 3rem;
+	position: relative;
 }
 
 .news-title {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	display: block;
 }
 
 .news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  padding: 1rem 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2rem;
+	padding: 1rem 0;
 }
 
 .news-card {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transform: perspective(1000px) rotateX(5deg) rotateY(-2deg);
-  height: 300px;
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	transform: perspective(1000px) rotateX(5deg) rotateY(-2deg);
+	height: 300px;
 }
 
 .news-card:hover {
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-5px);
-  box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3);
+	transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-5px);
+	box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3);
 }
 
 .news-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #dc3545, #ff4757, #dc3545);
-  z-index: 2;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, #dc3545, #ff4757, #dc3545);
+	z-index: 2;
 }
 
 .news-card-image {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-  filter: brightness(0.8) contrast(1.1);
-  transition: all 0.3s ease;
+	width: 100%;
+	height: 60%;
+	object-fit: cover;
+	filter: brightness(0.8) contrast(1.1);
+	transition: all 0.3s ease;
 }
 
 .news-card:hover .news-card-image {
-  filter: brightness(1) contrast(1.2);
-  transform: scale(1.05);
+	filter: brightness(1) contrast(1.2);
+	transform: scale(1.05);
 }
 
 .news-card-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem;
-  background: linear-gradient(
-    to top,
-    rgba(26, 26, 26, 0.95) 0%,
-    rgba(26, 26, 26, 0.9) 50%,
-    rgba(26, 26, 26, 0.7) 80%,
-    transparent 100%
-  );
-  color: #ffffff;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1.5rem;
+	background: linear-gradient(
+		to top,
+		rgba(26, 26, 26, 0.95) 0%,
+		rgba(26, 26, 26, 0.9) 50%,
+		rgba(26, 26, 26, 0.7) 80%,
+		transparent 100%
+	);
+	color: #ffffff;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 .news-card-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 0.8rem;
-  color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  line-height: 1.2;
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin-bottom: 0.8rem;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+	line-height: 1.2;
 }
 
 .news-card-description {
-  font-size: 0.9rem;
-  color: #cccccc;
-  line-height: 1.4;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+	font-size: 0.9rem;
+	color: #cccccc;
+	line-height: 1.4;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
 }
 
 /* Variaciones de colores para diferentes tarjetas */
 .news-card:nth-child(1)::before {
-  background: linear-gradient(90deg, #dc3545, #c82333);
+	background: linear-gradient(90deg, #dc3545, #c82333);
 }
 
 .news-card:nth-child(2)::before {
-  background: linear-gradient(90deg, #fd7e14, #e8590c);
+	background: linear-gradient(90deg, #fd7e14, #e8590c);
 }
 
 .news-card:nth-child(3)::before {
-  background: linear-gradient(90deg, #20c997, #17a2b8);
+	background: linear-gradient(90deg, #20c997, #17a2b8);
 }
 
 .news-card:nth-child(4)::before {
-  background: linear-gradient(90deg, #6f42c1, #5a4fcf);
+	background: linear-gradient(90deg, #6f42c1, #5a4fcf);
 }
 
 /* Efectos adicionales */
 .news-card:nth-child(odd) {
-  transform: perspective(1000px) rotateX(5deg) rotateY(2deg);
+	transform: perspective(1000px) rotateX(5deg) rotateY(2deg);
 }
 
 .news-card:nth-child(even) {
-  transform: perspective(1000px) rotateX(5deg) rotateY(-2deg);
+	transform: perspective(1000px) rotateX(5deg) rotateY(-2deg);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .news-container {
-    padding: 1rem;
-  }
+	.news-container {
+		padding: 1rem;
+	}
 
-  .news-title {
-    max-width: 100%;
-  }
+	.news-title {
+		max-width: 100%;
+	}
 
-  .news-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+	.news-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
 
-  .news-card {
-    height: 280px;
-    transform: none;
-  }
+	.news-card {
+		height: 280px;
+		transform: none;
+	}
 
-  .news-card:hover {
-    transform: translateY(-3px);
-  }
+	.news-card:hover {
+		transform: translateY(-3px);
+	}
 
-  .news-card:nth-child(odd),
-  .news-card:nth-child(even) {
-    transform: none;
-  }
+	.news-card:nth-child(odd),
+	.news-card:nth-child(even) {
+		transform: none;
+	}
 }
 
 @media (max-width: 480px) {
-  .news-title {
-    max-width: 100%;
-  }
+	.news-title {
+		max-width: 100%;
+	}
 
-  .news-card {
-    height: 250px;
-  }
+	.news-card {
+		height: 250px;
+	}
 
-  .news-card-content {
-    padding: 1rem;
-  }
+	.news-card-content {
+		padding: 1rem;
+	}
 
-  .news-card-title {
-    font-size: 1.2rem;
-  }
+	.news-card-title {
+		font-size: 1.2rem;
+	}
 
-  .news-card-description {
-    font-size: 0.85rem;
-  }
+	.news-card-description {
+		font-size: 0.85rem;
+	}
 }

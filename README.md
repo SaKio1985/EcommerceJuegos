@@ -1,6 +1,6 @@
 # Juegos de Mesa - Tienda en Línea [En Construccion]
 
-![Logo de Juegos de Mesa Página Web](https://res.cloudinary.com/dko8avpyk/image/upload/v1726075827/image-2_uvtdm7.webp)
+![Logo de Juegos de Mesa Página Web](src/assets/logo.png)
 
 ## Descripción
 
