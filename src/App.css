@@ -23,8 +23,9 @@
 body {
 	background-color: var(--app-background);
 	color: var(--app-text-color);
-	transition: background-color var(--transition-speed), color
-		var(--transition-speed);
+	transition:
+		background-color var(--transition-speed),
+		color var(--transition-speed);
 	margin: 0;
 	padding: 0;
 }
@@ -53,23 +54,26 @@ body {
 	min-height: 100vh;
 	background-color: var(--app-background);
 	color: var(--app-text-color);
-	transition: background-color var(--transition-speed), color
-		var(--transition-speed);
+	transition:
+		background-color var(--transition-speed),
+		color var(--transition-speed);
 }
 
 .main-content {
 	background-color: var(--main-background);
 	color: var(--app-text-color);
-	transition: background-color var(--transition-speed), color
-		var(--transition-speed);
+	transition:
+		background-color var(--transition-speed),
+		color var(--transition-speed);
 	min-height: 60vh;
 	padding: 1rem 0;
 }
 
 /* Asegurar que las tarjetas también respondan al tema */
 .cards-container > * {
-	transition: background-color var(--transition-speed), color
-		var(--transition-speed);
+	transition:
+		background-color var(--transition-speed),
+		color var(--transition-speed);
 }
 
 .cards-container .card {
